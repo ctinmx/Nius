@@ -1,0 +1,114 @@
+/* line 8, ../sass/catego.scss */
+
+
+#container{
+  background: rgb(192,201,219) !important;
+}
+
+.rombo-cont {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 13%;
+}
+
+/* line 15, ../sass/catego.scss */
+.menuRot {
+  opacity: 0.3;
+}
+
+/* line 19, ../sass/catego.scss */
+.menuRot.selected {
+  opacity: 1;
+}
+
+/* line 24, ../sass/catego.scss */
+.categorias-desc h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+/* line 28, ../sass/catego.scss */
+.categorias-desc p {
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* line 36, ../sass/catego.scss */
+.rombo {
+  float: left;
+  box-sizing: border-box;
+  margin: 31px 2px 2px 4px;
+  width: 120px;
+}
+/* line 42, ../sass/catego.scss */
+.rombo div.menuRot img.elem {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  border-radius: 10px;
+  
+
+}
+
+/* line 51, ../sass/catego.scss */
+.rombo.center {
+  box-sizing: border-box;
+  margin: 31px 2px 2px 4px;
+  position: absolute;
+  left: -webkit-calc(52% - 61px);
+  left: -moz-calc(52% - 61px);
+  left: calc(52% - 61px);
+  top: 64px;
+  width: 120px;
+}
+/* line 61, ../sass/catego.scss */
+.rombo.center div.menuRot img.elem {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/* line 70, ../sass/catego.scss */
+.second {
+  top: 191px !important;
+}
+
+/* line 75, ../sass/catego.scss */
+#nav,
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: outside;
+  position: relative;
+  line-height: 1.5em;
+}
+
+/* line 86, ../sass/catego.scss */
+#nav a:link,
+#nav a:active,
+#nav a:visited {
+  display: block;
+  padding: 0px 5px;
+  border: 1px solid #333;
+  color: #fff;
+  text-decoration: none;
+  background-color: #00ff21;
+}
+
+/* line 95, ../sass/catego.scss */
+#nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* line 100, ../sass/catego.scss */
+#nav > li {
+  float: left;
+  position: relative;
+}

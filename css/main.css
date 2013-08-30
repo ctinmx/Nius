@@ -1,0 +1,168 @@
+/*
+  Estilos en comun con toda la aplicación
+  */
+
+  .cbp-spmenu {
+    background: black;
+    position: fixed;
+    overflow-y: scroll;
+  }
+
+  #slider{
+    max-height: 480px;
+    max-width: 320px;
+  }
+
+  .cbp-spmenu h3 {
+    color: #fff;
+    font-size: 1.9em;
+    padding: 16px 20px 15px 20px;
+    margin: 0;
+    height: 60px;
+    font-weight: 300;
+    background: none repeat scroll 0 0 #023059;
+
+  }
+
+  .cbp-spmenu a {
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+
+  .cbp-spmenu a:hover {
+    background: rgb(169,198,222);
+  }
+
+  .cbp-spmenu a:active {
+    background: #444;
+    color: black;
+  }
+
+  .cbp-spmenu-vertical {
+    width: 240px;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .cbp-spmenu-vertical a {
+    border-bottom: 1px solid rgb(223,231,238);
+    padding: 1em;
+    background: rgb(144,171,198);
+  }
+
+  .cbp-spmenu-left {
+    left: -240px;
+  }
+
+  .cbp-spmenu-left.cbp-spmenu-open {
+    left: 0px;
+    background: rgb(144,171,198);
+  }
+
+  .cbp-spmenu-push {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+  }
+
+  .cbp-spmenu-push-toright {
+    left: 240px;
+  }
+
+  .cbp-spmenu-push-toleft {
+    left: -240px;
+  }
+
+  .cbp-spmenu,
+  .cbp-spmenu-push {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  header {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: none repeat scroll 0 0 #023059;
+    padding: 0.75em 1em;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid rgb(209,1,0);
+  }
+
+  .iconheader {
+    position: absolute;
+    top: 10px;
+    padding: 10px;
+  }
+
+  .iconheader.izquierda {
+    left: 10px;
+  }
+
+  .iconheader.derecha {
+    right: 10px !important;
+  }
+
+  header h1 {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+  }
+
+  @media screen and (max-height: 26.375em) {
+    .cbp-spmenu-vertical {
+      font-size: 90%;
+      width: 190px;
+    }
+
+    .cbp-spmenu-left,
+    .cbp-spmenu-push-toleft {
+      left: -190px;
+    }
+
+    .cbp-spmenu-push-toright {
+      left: 190px;
+    }
+  }
+
+  .ocultar {
+    opacity: 0;
+  }
+
+  .hide{
+    display: none !important;
+  }
+
+  /*** ¿ Se usan ?**/
+
+  .imagen-load {
+    margin-top: 20%;
+    text-align: center;
+  }
+
+  .hideoverflow {
+    overflow: hidden;
+  }
+  
+  #container{
+    background: white !important;
+    min-height: 420px; 
+  }
+
+  #container #titulo-feed{
+    margin: 0px;
+    padding: 10px 20px;
+    background: white;
+  }
+
+  .item-news{
+    box-shadow: 1px 2px 2px #000;
+  }
+
+  

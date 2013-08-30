@@ -1,0 +1,42 @@
+#main,#carrusel ul,#carrusel li{
+	padding: 0;
+	margin: 0;
+	height: 400px;
+	width: 320px;
+}
+
+#carrusel li{
+	list-style: none;
+}
+
+.img1{
+	background: url(../img/tutorial1.jpg) no-repeat;
+}
+.img2{
+	background: url(../img/tutorial2.jpg) no-repeat;
+}
+.img3{
+	background: url(../img/tutorial3.jpg) no-repeat;
+}
+
+.bullet{
+	display: block;
+	width: 18px;
+	height: 18px;
+	background: #999999;
+	float: left;
+	margin-right: 6px;
+	border: solid 2px #222222;
+	-webkit-border-radius: 1000px;
+	border-radius: 1000px;
+}
+
+.bullet.active{
+	background: #fff;
+}
+
+.dots{
+	position: absolute;
+	bottom: 20px;
+	left: calc(50% - 72px);
+}

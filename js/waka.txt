@@ -1,0 +1,151 @@
+
+
+var stringHtml='';
+var resultado;
+$.ajax({
+      url: 'http://localhost/nius/nius_api/index.php/api/index/1',
+      type: 'POST',
+      dataType: 'json',
+      error: console.log("Error :D"),
+      success: function (res) {
+	   resultado = res;
+	   var s = construir(resultado);
+	   console.log(s);
+      }
+      
+});
+
+/*var resultado = {
+    "usuario": {
+        "nombre": "nombre",
+        "aPaterno": "paterno",
+        "aMaterno": "materno",
+        "eMail": "email",
+        "Fid": "908197865"
+    },
+    "categorias": [
+        {
+            "id": "1",
+            "descripcion": "categ1"
+        },
+        {
+            "id": "2",
+            "descripcion": "categoria2"
+        }
+    ],
+    "categoriasUsuario": [
+        {
+            "id": "1",
+            "descripcion": "musica"
+        },
+        {
+            "id": "2",
+            "descripcion": "noticias"
+        }
+    ],
+    "rss": [
+        {
+            "id": "1",
+            "categoria": "musica",
+            "title": "rock",
+            "link": "http://www.rss.com",
+            "description": "blablalbalbalb",
+            "summary": "blablablalbalbabal",
+            "pubdate": "2010-12-03",
+            "images": [
+                {
+                    "url": "http://google.com/img.png"
+                },
+                {
+                    "url": "http://google.com/img.png"
+                }
+            ],
+            "videos": [
+                {
+                    "url": "www.youtube.com/maieocmioaeio8239432"
+                }
+            ]
+        },
+       {
+            "id": "2",
+            "categoria": "noticias",
+            "title": "rock",
+            "link": "http://www.rss.com",
+            "description": "blablalbalbalb",
+            "summary": "blablablalbalbabal",
+            "pubdate": "2010-12-03",
+            "images": [
+                {
+                    "url": "http://google.com/img.png"
+                },
+                {
+                    "url": "http://google.com/img.png"
+                }
+            ],
+            "videos": [
+                {
+                    "url": "www.youtube.com/maieocmioaeio8239432"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "categoria": "deportes",
+            "title": "rock",
+            "link": "http://www.rss.com",
+            "description": "blablalbalbalb",
+            "summary": "blablablalbalbabal",
+            "pubdate": "2010-12-03",
+            "images": [
+                {
+                    "url": "http://google.com/img.png"
+                },
+                {
+                    "url": "http://google.com/img.png"
+                }
+            ],
+            "videos": [
+                {
+                    "url": "www.youtube.com/maieocmioaeio8239432"
+                }
+            ]
+        } 
+    ]
+};*/
+
+
+
+
+function construir(resultado){
+    
+    console.log("construir");
+    resultado = JSON.stringify(resultado);
+    var jsonUsuario = JSON.parse(resultado);
+    var arregloFeeds = jsonUsuario.rss; // arreglo de feeds
+    stringHtml = '<div id ="feedsMiniatura">';
+    var noticiaCompleta = '<div id ="noticiasCompletas">'
+    for (var i =0 ; i<arregloFeeds.length;i++) {
+        var rssActual = arregloFeeds[i];
+        stringHtml += '<li><div class="itemTitle"><a class="modal" href="' + rssActual.link + '" id="'+rssActual.id+'-titulo">' + rssActual.title + "</a></div>";
+        stringHtml += '<div class="descripcion">'+rssActual.description+'</div>'
+        console.log(stringHtml);
+        noticiaCompleta += '<div id = "noticia'+i+'" class= "noticia"><div class="tituloNoticia">'+rssActual.title+'</div>'+ '<div class="summary">'+rssActual.summary+'</div>';
+	//if (rssActual.images[0].url!=='') {
+    //      
+            var idrss=rssActual.id;
+            console.log(jsonUsuario.images);
+            console.log(jsonUsuario.images[idrss])
+            stringHtml+= '<img="'+(jsonUsuario.images[rssActual.id].imagen_url)+'">'
+            noticiaCompleta+='<img="'+jsonUsuario.images[rssActual.id].imagen_url+'">'
+        //}
+        stringHtml += '</li>';
+        noticiaCompleta +='</div>'
+    }
+    stringHtml += "</ul>"
+    stringHtml += "</div>"
+    noticiaCompleta += '</div>'
+    return stringHtml;
+}
+
+
+

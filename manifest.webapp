@@ -1,0 +1,16 @@
+{
+	"name":"Nius",
+	"description": "Todas tus noticias en un solo lugar",
+	"launch_path": "index.html",
+    "icons": {
+        "128": "/images/icons/icon128.png"
+    },
+	"developer":{
+		"name":"Cinthia Lara, Daniel Torres, Manuel Rojo, Carlo Bautista, Cristobal Torres BY CTIN"
+	},
+	"default_locale":"es",
+	"orientation": ["portrait"]
+} 
+
+
+

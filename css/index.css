@@ -1,0 +1,21 @@
+
+body.splash {
+  padding: 0px !important;
+  margin: 0px !important;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #000;
+  overflow: hidden;
+}
+
+.logo-container {
+  padding: 5% 0;
+}
+
+.logo-container img {
+  padding: 10% 0;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+}

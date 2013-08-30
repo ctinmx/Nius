@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="hola">koko</div>
+
+
+
+<script>
+$(document).ready(function() {
+	var datos=["hola","dos","tres",'jair peña','ctin','que'];
+for (var i =0; i<=datos.length; i++) {
+$.ajax({
+type: "GET",
+crossDomain: true,
+dataType: 'jsonp',
+url:'https://ajax.googleapis.com/ajax/services/search/images',
+data: "v=1.0&q="+datos[i],
+success: function(datos){
+//alert(datos.responseData.results[0].url);
+$("#hola").append( "<img id='"+i+"' src='"+datos.responseData.results[0].url+"' />");
+//handleData(datos);
+}
+});
+};
+});
+</script>
+
+
+</body>
+</html>
+http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+ajax.googleapis.com
